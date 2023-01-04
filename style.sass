@@ -1,0 +1,292 @@
+$white: #fff
+$white2: #EFEFEF
+$orange: #F9BF3B
+$blue: #299CBD
+$grey: #ADACAB
+$grey2: #4a4a4a
+$grey3: #888888
+$black: #252525
+
+*
+    padding: 0
+    margin: 0
+    font-size: 15px
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+
+@mixin container()
+    width: 1144px
+    margin: 0 auto
+@mixin text()
+    font-weight: 300
+    font-size: 15px
+    line-height: 21px
+    color: $grey3
+.header
+    background-image: url("../img/main_bg.jpg")
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+    padding: 38px 0 61px 0
+    text-align: center
+    &_title
+        position: relative
+        text-align: center
+        display: flex
+        flex-direction: column
+        color: $white
+        font-size: 80px
+        line-height: 80px
+        margin: 20px 0
+        text-transform: uppercase
+        span
+            color: $orange
+            font-size: 41px
+            line-height: 41px
+        &::before, &::after
+            content: ''
+            position: absolute
+            top: 50%
+            height: 2px
+            width: 292px
+            display: block
+            background-color: $white
+        &::before
+            left: 0
+        &::after
+            right: 0
+    &_desc
+        font-size: 18px
+        line-height: 28px
+        color: $grey
+        font-weight: 300
+        text-align: left
+        margin: 22px 0 72px 0
+        strong
+            font-weight: 700
+            color: $orange
+            font-size: 21px
+    &_btn
+        padding: 23.5px 14px 24.5px 14px
+        display: block
+        margin: 0 auto
+        color: $white
+        font-size: 18px
+        line-height: 24px
+        text-transform: uppercase
+        background: linear-gradient(0deg, #2798B9 0%, #3AB6DA 100%)
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4)
+        border: none
+        cursor: pointer
+        &:hover
+            background: #418EA5
+    &_link
+        display: flex
+        justify-content: center
+        flex-direction: column
+        text-decoration: none
+        margin-top: 70px
+        span
+            color: $grey
+            font-size: 14px
+            text-transform: uppercase 
+        img
+            display: block
+            width: 30px
+            height: 19px
+            margin: 8px auto 0 auto
+.container 
+    @include container
+.logo
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 53px
+    img
+        display: block
+        width: 83px
+        height: 71px
+    span
+        text-transform: uppercase
+        color: $white
+        font-weight: 500
+        font-size: 15px
+        line-height: 24px
+
+// Section about
+
+.about
+    padding: 85px 0 75px 0
+    background-color: $white2
+    text-align: center
+    .container
+        h2
+            margin-bottom: 44px
+            position: relative
+            &::before
+                position: absolute
+                content: ''
+                display: block
+                width: 220px
+                height: 7px
+                background: #F9BF3B
+                left: 50%
+                top: 48px
+                transform: translate(-50%, -50%)
+    &_subtitle
+        font-weight: 400
+        font-size: 23px
+        line-height: 20px
+        color: $grey2
+        margin-bottom: 45px
+    &_wrapper
+        display: flex
+        justify-content: space-between
+    &_wrap
+        width: 370px
+    &_image
+        display: block
+        width: 342px
+        height: 201px
+    &_text
+        font-weight: 300
+        font-size: 14px
+        line-height: 21px
+        margin-top: 26px
+        color: $grey2
+h2
+    font-weight: 400
+    font-size: 30px
+    line-height: 30px
+    text-transform: uppercase
+    color: $black
+
+// Optimise section
+.optimise
+    padding: 108px 0 74px 0
+    background-color: rgba(0, 0, 0, 0.0001)
+    
+    .container
+        position: relative
+        h2
+            color: $blue
+            margin-bottom: 16px
+            font-weight: 900
+            width: 750px
+            margin-left: auto
+        p
+            font-weight: 300
+            font-size: 17px
+            line-height: 27px
+            width: 750px
+            color: $grey2
+            margin-bottom: 24px
+            margin-left: auto
+            &:last-of-type
+                font-weight: 700
+                margin-bottom: 0
+        img
+            position: absolute
+            left: -300px
+            bottom: -74px
+            z-index: -1
+// Study section
+.study
+    padding: 86px 0 68px 0
+    background-image: url("../img/second_bg.jpg")
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    text-align: center
+    .container
+        h2
+            margin-bottom: 64px
+            color: $white2
+            position: relative
+            &::before
+                position: absolute
+                content: ''
+                width: 220px
+                height: 7px
+                left: 50%
+                bottom: -24px
+                transform: translateX(-50%)
+                background-color: $orange
+    &_wrapper
+        display: flex
+        justify-content: space-around
+    &_wrap
+        width: 208px
+    &_image
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 118px
+        height: 118px
+        border-radius: 100%
+        background-color: #B4E2FF
+        margin: 0 auto 33px auto
+    &_text
+        font-weight: 300
+        line-height: 20px
+        font-size: 17px
+        color: $white2
+// Gift section
+.gift
+    padding: 86px 0 88px 0
+    background-color: $white2
+    text-align: center
+    img
+        margin-bottom: 45px
+    p
+        font-weight: 400
+        font-size: 30px
+        line-height: 43px
+        color: $black
+        margin-bottom: 51px
+// Meeting section
+.meet
+    padding: 90px 0 52px 0
+    background: rgba(0, 0, 0, 0.0001)
+    text-align: center
+    img
+        margin-bottom: 36px
+    h2
+        color: $black
+        margin-bottom: 30px
+    time
+        font-weight: 900
+        font-size: 36px
+        line-height: 36px
+        color: $blue
+    p
+        font-weight: 400
+        font-size: 23px
+        line-height: 20px
+        color: $grey2
+        margin-top: 24px
+// Footer section
+.footer
+    padding: 58px 0 72px 0
+    background-color: #1A1A1A
+    text-align: center
+    &_links
+        margin-bottom: 8px
+    &_link
+        @include text
+    &_link:not(:last-child)
+        margin-right: 14px
+        position: relative
+    &_link:not(:last-child)::after
+        content: ''
+        position: absolute
+        right: -8px
+        bottom: 2px
+        width: 1px
+        height: 12px
+        background-color: $grey3
+    &_feedback, &_feedback a
+        @include text
+    &_feedback a
+        text-decoration: none
+        
